@@ -2,7 +2,7 @@
   "id": "0",
   "name": "Diagram 1",
   "createdAt": "2026-07-03T13:12:40.246Z",
-  "updatedAt": "2026-07-03T13:14:21.930Z",
+  "updatedAt": "2026-07-03T13:31:28.352Z",
   "databaseType": "postgresql",
   "tables": [
     {
@@ -130,7 +130,7 @@
       ],
       "x": 0,
       "y": 0,
-      "color": "#8eb7ff",
+      "color": "#42e0c0",
       "isView": false,
       "createdAt": 1783084444797
     },
@@ -148,9 +148,9 @@
             "id": "int",
             "usageLevel": 1
           },
-          "nullable": true,
-          "primaryKey": false,
-          "unique": false,
+          "nullable": false,
+          "primaryKey": true,
+          "unique": true,
           "createdAt": 1783084444797
         },
         {
@@ -180,34 +180,45 @@
           "createdAt": 1783084444798
         }
       ],
-      "indexes": [],
-      "x": 300,
+      "indexes": [
+        {
+          "id": "15",
+          "name": "",
+          "fieldIds": [
+            "12"
+          ],
+          "unique": true,
+          "isPrimaryKey": true,
+          "createdAt": 1783084961060
+        }
+      ],
+      "x": 360,
       "y": 0,
       "color": "#8eb7ff",
       "isView": false,
       "createdAt": 1783084444798
     },
     {
-      "id": "15",
+      "id": "16",
       "name": "wyposazenie",
       "schema": "public",
       "order": 2,
       "fields": [
         {
-          "id": "16",
+          "id": "17",
           "name": "narzedzieid",
           "type": {
             "name": "int",
             "id": "int",
             "usageLevel": 1
           },
-          "nullable": true,
-          "primaryKey": false,
-          "unique": false,
+          "nullable": false,
+          "primaryKey": true,
+          "unique": true,
           "createdAt": 1783084444798
         },
         {
-          "id": "17",
+          "id": "18",
           "name": "nazwa",
           "type": {
             "name": "text",
@@ -220,15 +231,53 @@
           "createdAt": 1783084444798
         }
       ],
-      "indexes": [],
-      "x": 600,
-      "y": 0,
+      "indexes": [
+        {
+          "id": "19",
+          "name": "",
+          "fieldIds": [
+            "17"
+          ],
+          "unique": true,
+          "isPrimaryKey": true,
+          "createdAt": 1783085023204
+        }
+      ],
+      "x": 360,
+      "y": 200,
       "color": "#8eb7ff",
       "isView": false,
       "createdAt": 1783084444798
     }
   ],
-  "relationships": [],
+  "relationships": [
+    {
+      "id": "20",
+      "name": "pracownicy_dzialid_dzialy_dzialid",
+      "sourceSchema": "public",
+      "targetSchema": "public",
+      "sourceTableId": "1",
+      "targetTableId": "11",
+      "sourceFieldId": "5",
+      "targetFieldId": "12",
+      "sourceCardinality": "many",
+      "targetCardinality": "one",
+      "createdAt": 1783084903738
+    },
+    {
+      "id": "21",
+      "name": "wyposazenie_narzedzieid_pracownicy_narzedzieid",
+      "sourceSchema": "public",
+      "targetSchema": "public",
+      "sourceTableId": "16",
+      "targetTableId": "1",
+      "sourceFieldId": "17",
+      "targetFieldId": "9",
+      "sourceCardinality": "one",
+      "targetCardinality": "many",
+      "createdAt": 1783085193408
+    }
+  ],
   "dependencies": [],
   "areas": [],
   "customTypes": [],
