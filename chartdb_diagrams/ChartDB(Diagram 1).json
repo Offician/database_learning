@@ -1,19 +1,19 @@
 {
   "id": "0",
   "name": "Diagram 1",
-  "createdAt": "2026-07-03T13:12:40.246Z",
-  "updatedAt": "2026-07-03T13:31:28.352Z",
+  "createdAt": "2026-07-03T14:51:49.676Z",
+  "updatedAt": "2026-07-03T15:50:42.532Z",
   "databaseType": "postgresql",
   "tables": [
     {
       "id": "1",
-      "name": "pracownicy",
+      "name": "benefity",
       "schema": "public",
-      "order": 0,
+      "order": 3,
       "fields": [
         {
           "id": "2",
-          "name": "pracownikid",
+          "name": "benefit_id",
           "type": {
             "name": "int",
             "id": "int",
@@ -22,37 +22,236 @@
           "nullable": false,
           "primaryKey": true,
           "unique": true,
-          "createdAt": 1783084444797
+          "createdAt": 1783093762831
         },
         {
           "id": "3",
+          "name": "nazwa",
+          "type": {
+            "name": "text",
+            "id": "text",
+            "usageLevel": 1
+          },
+          "nullable": false,
+          "primaryKey": false,
+          "unique": false,
+          "createdAt": 1783093762831
+        },
+        {
+          "id": "4",
+          "name": "cena_pln",
+          "type": {
+            "name": "int",
+            "id": "int",
+            "usageLevel": 1
+          },
+          "nullable": false,
+          "primaryKey": false,
+          "unique": false,
+          "createdAt": 1783093762831
+        }
+      ],
+      "indexes": [
+        {
+          "id": "5",
+          "name": "",
+          "fieldIds": [
+            "2"
+          ],
+          "unique": true,
+          "isPrimaryKey": true,
+          "createdAt": 1783093762831
+        }
+      ],
+      "x": 580,
+      "y": 80,
+      "color": "#8eb7ff",
+      "isView": false,
+      "createdAt": 1783093762831,
+      "diagramId": "i3aqdlkwdich"
+    },
+    {
+      "id": "6",
+      "name": "pracownicy_benefity",
+      "schema": "public",
+      "order": 4,
+      "fields": [
+        {
+          "id": "7",
+          "name": "benefit_id",
+          "type": {
+            "name": "int",
+            "id": "int",
+            "usageLevel": 1
+          },
+          "nullable": false,
+          "primaryKey": true,
+          "unique": false,
+          "createdAt": 1783093762831
+        },
+        {
+          "id": "8",
+          "name": "pracownik_id",
+          "type": {
+            "name": "int",
+            "id": "int",
+            "usageLevel": 1
+          },
+          "nullable": false,
+          "primaryKey": true,
+          "unique": false,
+          "createdAt": 1783093762831
+        }
+      ],
+      "indexes": [
+        {
+          "id": "9",
+          "name": "",
+          "fieldIds": [
+            "7",
+            "8"
+          ],
+          "unique": true,
+          "isPrimaryKey": true,
+          "createdAt": 1783093762831
+        }
+      ],
+      "x": 240,
+      "y": 80,
+      "color": "#8eb7ff",
+      "isView": false,
+      "createdAt": 1783093762831,
+      "diagramId": "i3aqdlkwdich"
+    },
+    {
+      "id": "10",
+      "name": "wyposazenie",
+      "schema": "public",
+      "x": -140,
+      "y": 460,
+      "fields": [
+        {
+          "id": "11",
+          "name": "narzedzie_id",
+          "type": {
+            "name": "serial",
+            "id": "serial",
+            "usageLevel": 2
+          },
+          "nullable": false,
+          "primaryKey": true,
+          "unique": true,
+          "createdAt": 1783092250162,
+          "increment": true
+        },
+        {
+          "id": "12",
+          "name": "nazwa",
+          "type": {
+            "name": "text",
+            "id": "text",
+            "usageLevel": 1
+          },
+          "nullable": true,
+          "primaryKey": false,
+          "unique": false,
+          "createdAt": 1783084444798
+        }
+      ],
+      "indexes": [
+        {
+          "id": "13",
+          "name": "",
+          "fieldIds": [
+            "11"
+          ],
+          "unique": true,
+          "isPrimaryKey": true,
+          "createdAt": 1783085023204
+        }
+      ],
+      "color": "#8eb7ff",
+      "isView": false,
+      "createdAt": 1783084444798,
+      "order": 2,
+      "diagramId": "i3aqdlkwdich"
+    },
+    {
+      "id": "14",
+      "name": "pracownicy",
+      "schema": "public",
+      "x": -144.99999999999994,
+      "y": 31.249999999999986,
+      "fields": [
+        {
+          "id": "15",
+          "name": "pracownik_id",
+          "type": {
+            "name": "serial",
+            "id": "serial",
+            "usageLevel": 2
+          },
+          "nullable": false,
+          "primaryKey": true,
+          "unique": true,
+          "createdAt": 1783092250161,
+          "increment": true
+        },
+        {
+          "id": "16",
           "name": "imie",
           "type": {
             "name": "text",
             "id": "text",
             "usageLevel": 1
           },
-          "nullable": true,
+          "nullable": false,
           "primaryKey": false,
           "unique": false,
           "createdAt": 1783084444797
         },
         {
-          "id": "4",
+          "id": "17",
           "name": "nazwisko",
           "type": {
             "name": "text",
             "id": "text",
             "usageLevel": 1
           },
-          "nullable": true,
+          "nullable": false,
           "primaryKey": false,
           "unique": false,
           "createdAt": 1783084444797
         },
         {
-          "id": "5",
-          "name": "dzialid",
+          "id": "18",
+          "name": "email",
+          "type": {
+            "name": "text",
+            "id": "text",
+            "usageLevel": 1
+          },
+          "nullable": false,
+          "primaryKey": false,
+          "unique": false,
+          "createdAt": 1783084444797
+        },
+        {
+          "id": "19",
+          "name": "datazatrudnienia",
+          "type": {
+            "name": "text",
+            "id": "text",
+            "usageLevel": 1
+          },
+          "nullable": false,
+          "primaryKey": false,
+          "unique": false,
+          "createdAt": 1783084444797
+        },
+        {
+          "id": "20",
+          "name": "menedzer_id",
           "type": {
             "name": "int",
             "id": "int",
@@ -61,36 +260,36 @@
           "nullable": true,
           "primaryKey": false,
           "unique": false,
-          "createdAt": 1783084444797
+          "createdAt": 1783092250161
         },
         {
-          "id": "6",
-          "name": "datazatrudnienia",
+          "id": "21",
+          "name": "dzial_id",
           "type": {
-            "name": "text",
-            "id": "text",
+            "name": "int",
+            "id": "int",
             "usageLevel": 1
           },
           "nullable": true,
           "primaryKey": false,
           "unique": false,
-          "createdAt": 1783084444797
+          "createdAt": 1783092250162
         },
         {
-          "id": "7",
-          "name": "email",
+          "id": "22",
+          "name": "narzedzie_id",
           "type": {
-            "name": "text",
-            "id": "text",
+            "name": "int",
+            "id": "int",
             "usageLevel": 1
           },
           "nullable": true,
           "primaryKey": false,
           "unique": false,
-          "createdAt": 1783084444797
+          "createdAt": 1783092250162
         },
         {
-          "id": "8",
+          "id": "23",
           "name": "komentarz",
           "type": {
             "name": "text",
@@ -101,60 +300,49 @@
           "primaryKey": false,
           "unique": false,
           "createdAt": 1783084444797
-        },
-        {
-          "id": "9",
-          "name": "narzedzieid",
-          "type": {
-            "name": "int",
-            "id": "int",
-            "usageLevel": 1
-          },
-          "nullable": true,
-          "primaryKey": false,
-          "unique": false,
-          "createdAt": 1783084444797
         }
       ],
       "indexes": [
         {
-          "id": "10",
+          "id": "24",
           "name": "",
           "fieldIds": [
-            "2"
+            "15"
           ],
           "unique": true,
           "isPrimaryKey": true,
           "createdAt": 1783084444797
         }
       ],
-      "x": 0,
-      "y": 0,
       "color": "#42e0c0",
       "isView": false,
-      "createdAt": 1783084444797
+      "createdAt": 1783084444797,
+      "order": 0,
+      "diagramId": "i3aqdlkwdich"
     },
     {
-      "id": "11",
+      "id": "25",
       "name": "dzialy",
       "schema": "public",
-      "order": 1,
+      "x": -140,
+      "y": -160,
       "fields": [
         {
-          "id": "12",
-          "name": "dzialid",
+          "id": "26",
+          "name": "dzial_id",
           "type": {
-            "name": "int",
-            "id": "int",
-            "usageLevel": 1
+            "name": "serial",
+            "id": "serial",
+            "usageLevel": 2
           },
           "nullable": false,
           "primaryKey": true,
           "unique": true,
-          "createdAt": 1783084444797
+          "createdAt": 1783092250162,
+          "increment": true
         },
         {
-          "id": "13",
+          "id": "27",
           "name": "nazwa",
           "type": {
             "name": "text",
@@ -167,7 +355,7 @@
           "createdAt": 1783084444798
         },
         {
-          "id": "14",
+          "id": "28",
           "name": "lokalizacja",
           "type": {
             "name": "text",
@@ -182,100 +370,93 @@
       ],
       "indexes": [
         {
-          "id": "15",
+          "id": "29",
           "name": "",
           "fieldIds": [
-            "12"
+            "26"
           ],
           "unique": true,
           "isPrimaryKey": true,
           "createdAt": 1783084961060
         }
       ],
-      "x": 360,
-      "y": 0,
       "color": "#8eb7ff",
       "isView": false,
-      "createdAt": 1783084444798
-    },
-    {
-      "id": "16",
-      "name": "wyposazenie",
-      "schema": "public",
-      "order": 2,
-      "fields": [
-        {
-          "id": "17",
-          "name": "narzedzieid",
-          "type": {
-            "name": "int",
-            "id": "int",
-            "usageLevel": 1
-          },
-          "nullable": false,
-          "primaryKey": true,
-          "unique": true,
-          "createdAt": 1783084444798
-        },
-        {
-          "id": "18",
-          "name": "nazwa",
-          "type": {
-            "name": "text",
-            "id": "text",
-            "usageLevel": 1
-          },
-          "nullable": true,
-          "primaryKey": false,
-          "unique": false,
-          "createdAt": 1783084444798
-        }
-      ],
-      "indexes": [
-        {
-          "id": "19",
-          "name": "",
-          "fieldIds": [
-            "17"
-          ],
-          "unique": true,
-          "isPrimaryKey": true,
-          "createdAt": 1783085023204
-        }
-      ],
-      "x": 360,
-      "y": 200,
-      "color": "#8eb7ff",
-      "isView": false,
-      "createdAt": 1783084444798
+      "createdAt": 1783084444798,
+      "order": 1,
+      "diagramId": "i3aqdlkwdich"
     }
   ],
   "relationships": [
     {
-      "id": "20",
-      "name": "pracownicy_dzialid_dzialy_dzialid",
+      "id": "30",
+      "name": "benefity_benefit_id_pracownicy_benefity_benefit_id",
       "sourceSchema": "public",
       "targetSchema": "public",
       "sourceTableId": "1",
-      "targetTableId": "11",
-      "sourceFieldId": "5",
-      "targetFieldId": "12",
-      "sourceCardinality": "many",
-      "targetCardinality": "one",
-      "createdAt": 1783084903738
-    },
-    {
-      "id": "21",
-      "name": "wyposazenie_narzedzieid_pracownicy_narzedzieid",
-      "sourceSchema": "public",
-      "targetSchema": "public",
-      "sourceTableId": "16",
-      "targetTableId": "1",
-      "sourceFieldId": "17",
-      "targetFieldId": "9",
+      "targetTableId": "6",
+      "sourceFieldId": "2",
+      "targetFieldId": "7",
       "sourceCardinality": "one",
       "targetCardinality": "many",
-      "createdAt": 1783085193408
+      "createdAt": 1783093762831,
+      "diagramId": "i3aqdlkwdich"
+    },
+    {
+      "id": "31",
+      "name": "dzialy_dzial_id_pracownicy_dzial_id",
+      "sourceSchema": "public",
+      "targetSchema": "public",
+      "sourceTableId": "25",
+      "targetTableId": "14",
+      "sourceFieldId": "26",
+      "targetFieldId": "21",
+      "sourceCardinality": "one",
+      "targetCardinality": "many",
+      "createdAt": 1783092250162,
+      "diagramId": "i3aqdlkwdich"
+    },
+    {
+      "id": "32",
+      "name": "pracownicy_pracownik_id_pracownicy_benefity_pracownik_id",
+      "sourceSchema": "public",
+      "targetSchema": "public",
+      "sourceTableId": "14",
+      "targetTableId": "6",
+      "sourceFieldId": "15",
+      "targetFieldId": "8",
+      "sourceCardinality": "one",
+      "targetCardinality": "many",
+      "createdAt": 1783093762831,
+      "diagramId": "i3aqdlkwdich"
+    },
+    {
+      "id": "33",
+      "name": "pracownicy_pracownik_id_pracownicy_menedzer_id",
+      "sourceSchema": "public",
+      "targetSchema": "public",
+      "sourceTableId": "14",
+      "targetTableId": "14",
+      "sourceFieldId": "15",
+      "targetFieldId": "20",
+      "sourceCardinality": "one",
+      "targetCardinality": "many",
+      "createdAt": 1783092250162,
+      "diagramId": "i3aqdlkwdich"
+    },
+    {
+      "id": "34",
+      "name": "wyposazenie_narzedzie_id_pracownicy_narzedzie_id",
+      "sourceSchema": "public",
+      "targetSchema": "public",
+      "sourceTableId": "10",
+      "targetTableId": "14",
+      "sourceFieldId": "11",
+      "targetFieldId": "22",
+      "sourceCardinality": "one",
+      "targetCardinality": "many",
+      "createdAt": 1783092250162,
+      "diagramId": "i3aqdlkwdich"
     }
   ],
   "dependencies": [],
