@@ -21,3 +21,10 @@ services:
     restart: always
     ports:
       - 8080:8080
+    
+  chartdb:
+    image: ghcr.io/chartdb/chartdb:latest
+    container_name: chartdb
+    ports:
+      - "8000:80"
+    restart: unless-stopped
