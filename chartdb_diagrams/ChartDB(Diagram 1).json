@@ -1,0 +1,236 @@
+{
+  "id": "0",
+  "name": "Diagram 1",
+  "createdAt": "2026-07-03T13:12:40.246Z",
+  "updatedAt": "2026-07-03T13:14:21.930Z",
+  "databaseType": "postgresql",
+  "tables": [
+    {
+      "id": "1",
+      "name": "pracownicy",
+      "schema": "public",
+      "order": 0,
+      "fields": [
+        {
+          "id": "2",
+          "name": "pracownikid",
+          "type": {
+            "name": "int",
+            "id": "int",
+            "usageLevel": 1
+          },
+          "nullable": false,
+          "primaryKey": true,
+          "unique": true,
+          "createdAt": 1783084444797
+        },
+        {
+          "id": "3",
+          "name": "imie",
+          "type": {
+            "name": "text",
+            "id": "text",
+            "usageLevel": 1
+          },
+          "nullable": true,
+          "primaryKey": false,
+          "unique": false,
+          "createdAt": 1783084444797
+        },
+        {
+          "id": "4",
+          "name": "nazwisko",
+          "type": {
+            "name": "text",
+            "id": "text",
+            "usageLevel": 1
+          },
+          "nullable": true,
+          "primaryKey": false,
+          "unique": false,
+          "createdAt": 1783084444797
+        },
+        {
+          "id": "5",
+          "name": "dzialid",
+          "type": {
+            "name": "int",
+            "id": "int",
+            "usageLevel": 1
+          },
+          "nullable": true,
+          "primaryKey": false,
+          "unique": false,
+          "createdAt": 1783084444797
+        },
+        {
+          "id": "6",
+          "name": "datazatrudnienia",
+          "type": {
+            "name": "text",
+            "id": "text",
+            "usageLevel": 1
+          },
+          "nullable": true,
+          "primaryKey": false,
+          "unique": false,
+          "createdAt": 1783084444797
+        },
+        {
+          "id": "7",
+          "name": "email",
+          "type": {
+            "name": "text",
+            "id": "text",
+            "usageLevel": 1
+          },
+          "nullable": true,
+          "primaryKey": false,
+          "unique": false,
+          "createdAt": 1783084444797
+        },
+        {
+          "id": "8",
+          "name": "komentarz",
+          "type": {
+            "name": "text",
+            "id": "text",
+            "usageLevel": 1
+          },
+          "nullable": true,
+          "primaryKey": false,
+          "unique": false,
+          "createdAt": 1783084444797
+        },
+        {
+          "id": "9",
+          "name": "narzedzieid",
+          "type": {
+            "name": "int",
+            "id": "int",
+            "usageLevel": 1
+          },
+          "nullable": true,
+          "primaryKey": false,
+          "unique": false,
+          "createdAt": 1783084444797
+        }
+      ],
+      "indexes": [
+        {
+          "id": "10",
+          "name": "",
+          "fieldIds": [
+            "2"
+          ],
+          "unique": true,
+          "isPrimaryKey": true,
+          "createdAt": 1783084444797
+        }
+      ],
+      "x": 0,
+      "y": 0,
+      "color": "#8eb7ff",
+      "isView": false,
+      "createdAt": 1783084444797
+    },
+    {
+      "id": "11",
+      "name": "dzialy",
+      "schema": "public",
+      "order": 1,
+      "fields": [
+        {
+          "id": "12",
+          "name": "dzialid",
+          "type": {
+            "name": "int",
+            "id": "int",
+            "usageLevel": 1
+          },
+          "nullable": true,
+          "primaryKey": false,
+          "unique": false,
+          "createdAt": 1783084444797
+        },
+        {
+          "id": "13",
+          "name": "nazwa",
+          "type": {
+            "name": "text",
+            "id": "text",
+            "usageLevel": 1
+          },
+          "nullable": true,
+          "primaryKey": false,
+          "unique": false,
+          "createdAt": 1783084444798
+        },
+        {
+          "id": "14",
+          "name": "lokalizacja",
+          "type": {
+            "name": "text",
+            "id": "text",
+            "usageLevel": 1
+          },
+          "nullable": true,
+          "primaryKey": false,
+          "unique": false,
+          "createdAt": 1783084444798
+        }
+      ],
+      "indexes": [],
+      "x": 300,
+      "y": 0,
+      "color": "#8eb7ff",
+      "isView": false,
+      "createdAt": 1783084444798
+    },
+    {
+      "id": "15",
+      "name": "wyposazenie",
+      "schema": "public",
+      "order": 2,
+      "fields": [
+        {
+          "id": "16",
+          "name": "narzedzieid",
+          "type": {
+            "name": "int",
+            "id": "int",
+            "usageLevel": 1
+          },
+          "nullable": true,
+          "primaryKey": false,
+          "unique": false,
+          "createdAt": 1783084444798
+        },
+        {
+          "id": "17",
+          "name": "nazwa",
+          "type": {
+            "name": "text",
+            "id": "text",
+            "usageLevel": 1
+          },
+          "nullable": true,
+          "primaryKey": false,
+          "unique": false,
+          "createdAt": 1783084444798
+        }
+      ],
+      "indexes": [],
+      "x": 600,
+      "y": 0,
+      "color": "#8eb7ff",
+      "isView": false,
+      "createdAt": 1783084444798
+    }
+  ],
+  "relationships": [],
+  "dependencies": [],
+  "areas": [],
+  "customTypes": [],
+  "notes": []
+}
