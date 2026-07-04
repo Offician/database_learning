@@ -2,7 +2,7 @@
   "id": "0",
   "name": "Diagram 1",
   "createdAt": "2026-07-03T14:51:49.676Z",
-  "updatedAt": "2026-07-03T15:50:42.532Z",
+  "updatedAt": "2026-07-04T19:48:17.747Z",
   "databaseType": "postgresql",
   "tables": [
     {
@@ -152,7 +152,7 @@
             "id": "text",
             "usageLevel": 1
           },
-          "nullable": true,
+          "nullable": false,
           "primaryKey": false,
           "unique": false,
           "createdAt": 1783084444798
@@ -240,9 +240,8 @@
           "id": "19",
           "name": "datazatrudnienia",
           "type": {
-            "name": "text",
-            "id": "text",
-            "usageLevel": 1
+            "id": "date",
+            "name": "date"
           },
           "nullable": false,
           "primaryKey": false,
@@ -349,28 +348,41 @@
             "id": "text",
             "usageLevel": 1
           },
-          "nullable": true,
+          "nullable": false,
           "primaryKey": false,
           "unique": false,
           "createdAt": 1783084444798
         },
         {
           "id": "28",
-          "name": "lokalizacja",
+          "name": "miasto",
           "type": {
             "name": "text",
             "id": "text",
             "usageLevel": 1
           },
-          "nullable": true,
+          "nullable": false,
           "primaryKey": false,
           "unique": false,
-          "createdAt": 1783084444798
+          "createdAt": 1783188205868
+        },
+        {
+          "id": "29",
+          "name": "ulica",
+          "type": {
+            "name": "text",
+            "id": "text",
+            "usageLevel": 1
+          },
+          "nullable": false,
+          "primaryKey": false,
+          "unique": false,
+          "createdAt": 1783188205868
         }
       ],
       "indexes": [
         {
-          "id": "29",
+          "id": "30",
           "name": "",
           "fieldIds": [
             "26"
@@ -389,7 +401,7 @@
   ],
   "relationships": [
     {
-      "id": "30",
+      "id": "31",
       "name": "benefity_benefit_id_pracownicy_benefity_benefit_id",
       "sourceSchema": "public",
       "targetSchema": "public",
@@ -403,7 +415,7 @@
       "diagramId": "i3aqdlkwdich"
     },
     {
-      "id": "31",
+      "id": "32",
       "name": "dzialy_dzial_id_pracownicy_dzial_id",
       "sourceSchema": "public",
       "targetSchema": "public",
@@ -417,7 +429,7 @@
       "diagramId": "i3aqdlkwdich"
     },
     {
-      "id": "32",
+      "id": "33",
       "name": "pracownicy_pracownik_id_pracownicy_benefity_pracownik_id",
       "sourceSchema": "public",
       "targetSchema": "public",
@@ -431,7 +443,7 @@
       "diagramId": "i3aqdlkwdich"
     },
     {
-      "id": "33",
+      "id": "34",
       "name": "pracownicy_pracownik_id_pracownicy_menedzer_id",
       "sourceSchema": "public",
       "targetSchema": "public",
@@ -445,7 +457,7 @@
       "diagramId": "i3aqdlkwdich"
     },
     {
-      "id": "34",
+      "id": "35",
       "name": "wyposazenie_narzedzie_id_pracownicy_narzedzie_id",
       "sourceSchema": "public",
       "targetSchema": "public",
